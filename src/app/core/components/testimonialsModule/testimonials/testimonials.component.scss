@@ -1,0 +1,24 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efeff0;
+
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+#testimonial-title {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #666666;
+}
+
+#testimonial-subtitle {
+    margin: 15px 0 15px 0;
+    color: #666666;
+    font-weight: 400;
+}

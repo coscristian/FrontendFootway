@@ -1,0 +1,20 @@
+#tour-details {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail {
+    display: flex;
+    flex-direction: row;
+}
+
+span {
+    font-weight: 700;
+    width: 150px;
+}
+
+p {
+    color: #666666;
+    text-align: right;
+}

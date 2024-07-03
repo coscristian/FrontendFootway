@@ -1,0 +1,28 @@
+.main-image {
+    width: 100%;
+    height: 280px;;
+}
+
+@media only screen and (min-width: 900px) {
+    .main-image {
+        height: 580px;    
+    }
+}
+
+.main-container {
+    position: relative;
+}
+
+.container-content {
+    background-color: rgba(0,0,0,0.4);    
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 30px;
+}
+
+.container-content > h1 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
