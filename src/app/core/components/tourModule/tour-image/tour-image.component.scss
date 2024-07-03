@@ -1,0 +1,14 @@
+.main-image {
+    width: 100%;
+    height: 280px;;
+}
+
+@media only screen and (min-width: 900px) {
+    .main-image {
+        height: 580px;    
+    }
+}
+
+.main-container {
+    position: relative;
+}

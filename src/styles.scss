@@ -1,0 +1,62 @@
+@use '@angular/material' as mat;
+@import 'app/styles/themes/custom-theme.scss';
+
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  // border: 0;
+  // font-size: 100%;
+  // font: inherit;
+  // vertical-align: baseline;
+}
+
+
+@media (min-width: 600px) {
+  // body {
+  //   margin-left:50px; margin-right: 50px; margin-top: 0; margin-bottom: 0;
+  // }
+
+  .tour-info-picker-dialog .mat-mdc-dialog-surface{
+    width: 600px;
+    padding: 30px;
+  }  
+}
+
+.prueba {
+  color: mat.m2-get-color-from-palette($my-app-primary, 900);
+//   color: mat.get-contrast-color-from-palette($my-app-primary, 500);
+}
+
+.logo-title {
+    display: flex;    
+    align-items: center;
+    gap: 10px;
+}
+
+.options-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+}
+
+.tour-info-picker-dialog .mat-mdc-dialog-surface{
+  padding: 30px;
+}

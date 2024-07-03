@@ -1,0 +1,32 @@
+#tour-info-picker-title {
+    display: flex;
+    justify-content: center;
+}
+
+#calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.button-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#cancel-button {
+    background-color: red;
+    color: white;
+    font-weight: 500;
+}
+
+#next-button {
+    background-color:#07689f;
+    color: white;
+    font-weight: 500;
+}
+
+calendar-month {
+    --color-accent: #07689f;
+}

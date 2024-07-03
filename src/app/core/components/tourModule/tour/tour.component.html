@@ -1,0 +1,23 @@
+<app-tour-image />
+<app-tour-info />
+<app-tour-details />
+
+<div id="button-container">
+    <app-generic-button (click)="openDialog()"/>
+</div>
+
+<section id="other-tours-section">
+    <h2 id="tour-title">Check other Tours</h2>
+    <app-card-catalog>
+        <app-card imagePath="assets/images/London2.png" title="London" description="Lorem ipsum dolor"
+            alt="London City" />
+
+        <app-card imagePath="assets/images/London2.png" title="London" description="Lorem ipsum dolor"
+            alt="London City" />
+
+        <app-card imagePath="assets/images/London2.png" title="London" description="Lorem ipsum dolor"
+            alt="London City" />
+        <app-card imagePath="assets/images/London2.png" title="London" description="Lorem ipsum dolor"
+            alt="London City" />
+    </app-card-catalog>
+</section>
