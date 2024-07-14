@@ -19,10 +19,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
-  // border: 0;
-  // font-size: 100%;
-  // font: inherit;
-  // vertical-align: baseline;
 }
 
 
@@ -39,7 +35,6 @@ time, mark, audio, video {
 
 .prueba {
   color: mat.m2-get-color-from-palette($my-app-primary, 900);
-//   color: mat.get-contrast-color-from-palette($my-app-primary, 500);
 }
 
 .logo-title {
@@ -60,3 +55,50 @@ time, mark, audio, video {
 .tour-info-picker-dialog .mat-mdc-dialog-surface{
   padding: 30px;
 }
+
+.card-description {
+  color: #666666;
+}
+
+.card {
+  width: 400px;
+}
+
+.card-content {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.main-catalog {
+  display: flex;  
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  gap: 50px;
+}
+
+@media (min-width: 600px) {
+  .main-catalog  { 
+    display: grid; 
+    grid-template-columns: repeat(1, 1fr); 
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .main-catalog {
+    display: grid;    
+    grid-template-columns: repeat(2, 1fr);    
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-catalog {
+    display: grid;    
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+

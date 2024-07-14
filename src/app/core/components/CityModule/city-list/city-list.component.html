@@ -1,0 +1,13 @@
+<div class="main-catalog">
+    <div *ngFor="let city of citiesList" [routerLink]="['/city', city.id]">
+        <mat-card class="card">
+            <img [src]="city.imageUrl"/>
+            <mat-card-content class="card-content">
+                <h3>{{ city.name }}</h3>
+                <p class="card-description">
+                    {{ city.shortDescription }}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

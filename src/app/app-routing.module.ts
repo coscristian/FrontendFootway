@@ -10,11 +10,17 @@ const routes: Routes = [
     component: MainContentComponent 
   },
   {
-    path: 'city',
-    component: CityComponent 
+    path: 'city/:cityId',
+    component: CityComponent,
+    // children: [
+    //   {
+    //     path: 'tour/:tourId',
+    //     component: TourComponent
+    //   }
+    // ]
   },
   {
-    path: 'tour',
+    path: 'tour/:tourId',
     component: TourComponent
   }
 ];

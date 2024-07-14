@@ -35,6 +35,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { SelectAmountTouristsComponent } from './core/components/tourModule/select-amount-tourists/select-amount-tourists.component';
+import { CardCityComponentComponent } from './core/components/CityModule/card-city-component/card-city-component.component';
+import { CityListComponent } from './core/components/CityModule/city-list/city-list.component';
+import { TourListComponent } from './core/components/tour-list/tour-list.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,10 @@ import { SelectAmountTouristsComponent } from './core/components/tourModule/sele
     TourDateModalComponent,
     TourInfoPickerComponent,
     SelectTimeComponent,
-    SelectAmountTouristsComponent
+    SelectAmountTouristsComponent,
+    CardCityComponentComponent,
+    CityListComponent,
+    TourListComponent
     // CalendarDate
   ],
   imports: [

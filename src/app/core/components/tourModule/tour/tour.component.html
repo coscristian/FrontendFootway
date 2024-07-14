@@ -1,6 +1,17 @@
-<app-tour-image />
-<app-tour-info />
-<app-tour-details />
+<app-tour-image *ngIf="tour"
+    [imageUrl]="tour.imageUrl" 
+    [alt]="tour.name"
+/>
+<app-tour-info *ngIf="tour"
+    [title]="tour.name" 
+    [description]="tour.longDescription"
+/>
+<app-tour-details *ngIf="tour"
+    [duration]="tour.tourDetails.duration" 
+    [languages]="tour.tourDetails.languages" 
+    [price]="tour.tourDetails.price" 
+    [places]="tour.tourDetails.places"
+/>
 
 <div id="button-container">
     <app-generic-button (click)="openDialog()"/>

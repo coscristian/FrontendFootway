@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { City } from '../../../models/City';
+import { CityService } from '../../../services/CityService';
 
 @Component({
   selector: 'app-main-content',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
+
+
+
+  
+
+  
 
 }

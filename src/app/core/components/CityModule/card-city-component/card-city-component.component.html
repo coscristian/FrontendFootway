@@ -1,0 +1,11 @@
+<div *ngFor="let city of citiesList">
+    <mat-card class="card">
+        <img src="{{ this.imageUrl }}"/>
+        <mat-card-content class="card-content">
+            <h3>{{ this.name }}</h3>
+            <p class="card-description">
+                {{ this.shortDescription }}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
