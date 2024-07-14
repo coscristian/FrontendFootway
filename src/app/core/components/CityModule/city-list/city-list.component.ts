@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { cities, City } from '../../../models/City';
+import { City } from '../../../models/City';
 import { CityService } from '../../../services/CityService';
 
 @Component({

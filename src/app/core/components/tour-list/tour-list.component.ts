@@ -13,7 +13,8 @@ export class TourListComponent implements OnInit{
 
   public tourId: number | undefined;  
 
-  public toursList: Tour[] = this.tourService.getTours();
+  @Input()
+  public toursList: Tour[] | undefined;
 
   constructor(private route: ActivatedRoute, private tourService: TourService) { }
   

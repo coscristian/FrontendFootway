@@ -47,11 +47,11 @@ export class TourService {
   ];
   
   constructor() { }
-
+  
   getTours(): Tour[] {
     return this.tours;
   }
-
+  
   getTourById(tourId: number): Tour {
     return this.tours.find(tour => tour.id === tourId) as Tour;
   }

@@ -1,9 +1,12 @@
-<app-city-image />  
-<app-section-info 
+<app-city-image *ngIf="city"
+    [imageUrl]="city.imageUrl" 
+    [alt]="city.name"
+/>  
+<app-section-info *ngIf="city"
     title="Our Tours"
-    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+    [description]="city.longDescription"
 /> 
-<app-tour-list
-    
+<app-tour-list *ngIf="city?.tours"
+    [toursList]="city?.tours"
 />
 
