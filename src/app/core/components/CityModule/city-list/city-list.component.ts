@@ -14,7 +14,10 @@ export class CityListComponent {
   constructor(private cityService: CityService) { }
 
   ngOnInit(): void {
-    this.citiesList = this.cityService.getCities();  
+    this.cityService.getCities().subscribe(cities => {
+      console.log(cities);
+      this.citiesList = cities;
+    });  
    
     console.log(this.citiesList);
   }

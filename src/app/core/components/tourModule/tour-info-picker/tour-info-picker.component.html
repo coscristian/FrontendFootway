@@ -2,16 +2,16 @@
   <h2 id="tour-info-picker-title">Booking your tour</h2>
 
   <div id="calendar-container">
-    <calendar-date>      
+    <calendar-date id="calendar" #calendar>      
       <calendar-month></calendar-month>
     </calendar-date>
   </div>
 
   <app-select-time />
-  <app-select-amount-tourists />
+  <!-- <app-select-amount-tourists /> -->
 
 </div>
 <div mat-dialog-actions class="button-actions">
   <button id="cancel-button" mat-button (click)="onNoClick()">Cancel</button>
-  <button id="next-button" mat-button cdkFocusInitial>Next</button>
+  <button id="next-button" mat-button cdkFocusInitial (click)="onNextClick()">Next</button>
 </div>

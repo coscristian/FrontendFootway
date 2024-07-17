@@ -3,32 +3,22 @@
     [alt]="tour.name"
 />
 <app-tour-info *ngIf="tour"
-    [title]="tour.name" 
+    [name]="tour.name" 
     [description]="tour.longDescription"
 />
 <app-tour-details *ngIf="tour"
     [duration]="tour.tourDetails.duration" 
     [languages]="tour.tourDetails.languages" 
     [price]="tour.tourDetails.price" 
-    [places]="tour.tourDetails.places"
+    [places]="getPlacesArray()"
 />
-
 <div id="button-container">
     <app-generic-button (click)="openDialog()"/>
 </div>
 
+
+
 <section id="other-tours-section">
     <h2 id="tour-title">Check other Tours</h2>
-    <app-card-catalog>
-        <app-card imagePath="assets/images/London2.png" title="London" description="Lorem ipsum dolor"
-            alt="London City" />
-
-        <app-card imagePath="assets/images/London2.png" title="London" description="Lorem ipsum dolor"
-            alt="London City" />
-
-        <app-card imagePath="assets/images/London2.png" title="London" description="Lorem ipsum dolor"
-            alt="London City" />
-        <app-card imagePath="assets/images/London2.png" title="London" description="Lorem ipsum dolor"
-            alt="London City" />
-    </app-card-catalog>
+    <app-tour-list />
 </section>

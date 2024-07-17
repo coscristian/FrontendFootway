@@ -6,22 +6,31 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-tour-list',
   templateUrl: './tour-list.component.html',
-  styleUrl: './tour-list.component.scss'
+  styleUrl: './tour-list.component.scss',
 })
-export class TourListComponent implements OnInit{  
+export class TourListComponent implements OnInit {
   public cityId: number | undefined;
 
-  public tourId: number | undefined;  
+  public tourId: number | undefined;
 
   @Input()
   public toursList: Tour[] | undefined;
 
-  constructor(private route: ActivatedRoute, private tourService: TourService) { }
-  
-  ngOnInit(): void { 
-    const routeParams = this.route.snapshot.paramMap;
-    this.cityId = Number(routeParams.get('cityId'));
-    
-    console.log("ID Ciudad seleccionada: " + this.cityId);
+  constructor(
+    private route: ActivatedRoute,
+    private tourService: TourService
+  ) {}
+
+  ngOnInit(): void {
+    if (this.toursList) {
+      const routeParams = this.route.snapshot.paramMap;
+      this.cityId = Number(routeParams.get('cityId'));
+      console.log('ID Ciudad seleccionada: ' + this.cityId);
+    } else {
+      this.tourService.getAll().subscribe((tours) => {
+        console.log(tours);
+        this.toursList = tours;
+      });
+    }
   }
 }

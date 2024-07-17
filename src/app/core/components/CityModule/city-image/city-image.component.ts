@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CityImageComponent {
   @Input() public imageUrl: string | undefined;
-  @Input() public alt: string | undefined;
+  @Input() public title: string | undefined;
 }

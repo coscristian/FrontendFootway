@@ -13,17 +13,6 @@ import { Tour } from '../../../models/Tour';
 export class TourComponent {
   public tour: Tour | undefined;
   public tourId: number | undefined;
-
-  // public name: string | undefined;
-  // public description: string | undefined;
-  // public imageUrl: string | undefined;
-  // public isActive: boolean | undefined;
-  // public duration: number | undefined;
-  // public languages: string[] | undefined;
-  // public price: number | undefined;
-  // public maximumCapacity: number | undefined;
-  // public places: string[] | undefined;
-  // public tourId: number | undefined;
   
   constructor(
     private route: ActivatedRoute,
@@ -37,9 +26,12 @@ export class TourComponent {
     
     console.log("ID Tour seleccionada: " + this.tourId);
 
-    const tour: Tour = this.tourService.getTourById(this.tourId);    
-    this.tour = tour;
-    console.log(tour);
+    this.tourService.getTourById(this.tourId).subscribe(tour => {
+      this.tour = tour;
+      console.log(this.tour);
+    }); 
+
+    // this.tour = this.tourService.getTourById(this.tourId);         
 
     // this.duration = tour.tourDetails.duration;
     // this.languages = tour.tourDetails.language;
@@ -48,10 +40,15 @@ export class TourComponent {
     // this.places = tour.tourDetails.places;
   }
 
+  getPlacesArray(): string[] {
+    return this.tour?.tourDetails.places.split(',').map(place => place.trim()) as string[];
+  }
+
   openDialog(): void {
     console.log("Helo");
     const dialogRef = this.dialog.open(TourInfoPickerComponent, {      
-      panelClass: 'tour-info-picker-dialog'
+      panelClass: 'tour-info-picker-dialog',
+      data: this.tourId
     });
 
     dialogRef.afterClosed().subscribe(result => {

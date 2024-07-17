@@ -38,6 +38,9 @@ import { SelectAmountTouristsComponent } from './core/components/tourModule/sele
 import { CardCityComponentComponent } from './core/components/CityModule/card-city-component/card-city-component.component';
 import { CityListComponent } from './core/components/CityModule/city-list/city-list.component';
 import { TourListComponent } from './core/components/tour-list/tour-list.component';
+import { TouristPersonalDataComponent } from './core/components/tourModule/tourist-personal-data/tourist-personal-data.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SuccessModalComponent } from './shared/components/success-modal/success-modal.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +68,9 @@ import { TourListComponent } from './core/components/tour-list/tour-list.compone
     SelectAmountTouristsComponent,
     CardCityComponentComponent,
     CityListComponent,
-    TourListComponent
+    TourListComponent,
+    TouristPersonalDataComponent,
+    SuccessModalComponent
     // CalendarDate
   ],
   imports: [
@@ -80,7 +85,9 @@ import { TourListComponent } from './core/components/tour-list/tour-list.compone
     ReactiveFormsModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule    
+    MatInputModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     provideAnimationsAsync(),

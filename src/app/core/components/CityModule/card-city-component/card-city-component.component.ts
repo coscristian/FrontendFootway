@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { City } from '../../../models/City';
 import { CityService } from '../../../services/CityService';
 
@@ -7,7 +7,7 @@ import { CityService } from '../../../services/CityService';
   templateUrl: './card-city-component.component.html',
   styleUrl: './card-city-component.component.scss'
 })
-export class CardCityComponentComponent {
+export class CardCityComponentComponent{
   @Input()
   public id: number | undefined;
 
@@ -24,9 +24,19 @@ export class CardCityComponentComponent {
   public imageUrl: string | undefined;
 
   // @Input()
-  public citiesList: City[] = this.cityService.getCities();
+  public citiesList: City[] | undefined;
 
   constructor(private cityService: CityService) { }
+
+  // ngOnInit(): void {
+  //   this.cityService.getCities().subscribe(cities => {
+  //     this.citiesList = cities;
+  //   });  
+   
+  //   console.log(this.citiesList);
+  // }
+
+
 
   // ngOnInit(): void {
   //   this.citiesList = this.cityService.getCities();  

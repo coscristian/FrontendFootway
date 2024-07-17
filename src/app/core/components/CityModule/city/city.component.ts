@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { City } from '../../../models/City';
 import { Tour } from '../../../models/Tour';
-import { TourService } from '../../../services/TourService';
 import { ActivatedRoute } from '@angular/router';
 import { CityService } from '../../../services/CityService';
 
@@ -22,6 +21,10 @@ export class CityComponent implements OnInit{
     const routeParams = this.route.snapshot.paramMap;
     this.cityId = Number(routeParams.get('cityId'));
 
-    this.city = this.cityService.getCityById(this.cityId);
+    this.cityService.getCityById(this.cityId).subscribe(cities => {
+      this.city = cities;
+    });  
+   
+    console.log(this.city);
   }
 }
