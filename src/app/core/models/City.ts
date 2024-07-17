@@ -10,10 +10,3 @@ export class City {
         public tours: Tour[]
     ) {}    
 }
-
-// export const cities: City[] = [
-//     {id: 1, name: '1984', shortDescription: 'George Owell', longDescription: 'George Owell', imageUrl:'assets/images/London2.png'},
-//     {id: 1, name: '1985', shortDescription: 'George Owell', longDescription: 'George Owell', imageUrl:'assets/images/London2.png'},
-//     {id: 1, name: '1986', shortDescription: 'George Owell', longDescription: 'George Owell', imageUrl:'assets/images/London2.png'},
-//     {id: 1, name: '1987', shortDescription: 'George Owell', longDescription: 'George Owell', imageUrl:'assets/images/London2.png'},    
-// ];
