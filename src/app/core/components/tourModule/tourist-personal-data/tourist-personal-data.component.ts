@@ -38,11 +38,9 @@ export class TouristPersonalDataComponent {
         ...this.bookingData, 
         ...this.touristForm.value
       };
-      console.log('Formulario válido', formData);
 
       this.touristService.saveTourist(formData).subscribe(
         response => {
-          console.log('Datos enviados correctamente', response);
           this.dialogRef.close();
 
           const dialogRef = this.dialog.open(SuccessModalComponent, {
@@ -54,13 +52,8 @@ export class TouristPersonalDataComponent {
           }, 5000);
         },
         error => {
-          console.error('Error al enviar los datos', error);
-          // Aquí puedes manejar el error de tu API, como mostrar un mensaje de error
         }
       );
-    } else {
-      console.error('Formulario inválido');
-      // Aquí puedes manejar el caso en que el formulario es inválido, como mostrar un mensaje al usuario
     }
   }
 

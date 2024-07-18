@@ -22,22 +22,10 @@ export class TourComponent {
 
   ngOnInit(): void { 
     const routeParams = this.route.snapshot.paramMap;
-    this.tourId = Number(routeParams.get('tourId'));
-    
-    console.log("ID Tour seleccionada: " + this.tourId);
-
+    this.tourId = Number(routeParams.get('tourId'));    
     this.tourService.getTourById(this.tourId).subscribe(tour => {
       this.tour = tour;
-      console.log(this.tour);
     }); 
-
-    // this.tour = this.tourService.getTourById(this.tourId);         
-
-    // this.duration = tour.tourDetails.duration;
-    // this.languages = tour.tourDetails.language;
-    // this.price = tour.tourDetails.price;
-    // this.maximumCapacity = tour.tourDetails.maximumCapacity;
-    // this.places = tour.tourDetails.places;
   }
 
   getPlacesArray(): string[] {
@@ -45,14 +33,12 @@ export class TourComponent {
   }
 
   openDialog(): void {
-    console.log("Helo");
     const dialogRef = this.dialog.open(TourInfoPickerComponent, {      
       panelClass: 'tour-info-picker-dialog',
       data: this.tourId
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
     });
   }
 

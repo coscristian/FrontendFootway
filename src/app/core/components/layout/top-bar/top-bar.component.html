@@ -1,12 +1,12 @@
 <mat-toolbar color="primary" class="main-header">
-    <div class="logo-title">
+    <div class="logo-title" [routerLink]="['/']">
         <img src="assets/images/logoFootway.png" alt="logoFootway" width="35" height="35" />
         <span> Footway </span>
     </div>
     <span class="example-fill-remaining-space"></span>
 
     <div class="options-menu">
-        <div> Cities </div>
-        <div> Tours </div>
+        <div [routerLink]="['/']" fragment="cities-section"> Cities </div>
+        <div [routerLink]="['/city/6']"> Tours </div>
     </div>
 </mat-toolbar>

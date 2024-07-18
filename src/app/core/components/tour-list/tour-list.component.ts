@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Tour } from '../../models/Tour';
 import { TourService } from '../../services/TourService';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tour-list',
@@ -10,14 +10,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class TourListComponent implements OnInit {
   public cityId: number | undefined;
-
   public tourId: number | undefined;
-
+  
+  @Input()
+  public reload: boolean | undefined;
+  
   @Input()
   public toursList: Tour[] | undefined;
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private tourService: TourService
   ) {}
 
@@ -25,12 +28,22 @@ export class TourListComponent implements OnInit {
     if (this.toursList) {
       const routeParams = this.route.snapshot.paramMap;
       this.cityId = Number(routeParams.get('cityId'));
-      console.log('ID Ciudad seleccionada: ' + this.cityId);
+      
     } else {
+      const routeParams = this.route.snapshot.paramMap;
+      this.tourId = Number(routeParams.get('tourId'));
+
       this.tourService.getAll().subscribe((tours) => {
-        console.log(tours);
-        this.toursList = tours;
+        this.toursList = tours.filter((tour) => tour.id != this.tourId);
       });
+      this.reload = true;
     }
+  }
+
+  navigateToTour(tourId: number): void {    
+    this.router.navigate(['/tour', tourId]).then(() => {
+      if(this.reload)
+        window.location.reload(); // Reload necesario cuando se selecciona un tour del "Check other tours" en la página de un tour    
+    });
   }
 }

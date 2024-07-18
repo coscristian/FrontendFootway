@@ -23,25 +23,7 @@ export class CardCityComponentComponent{
   @Input()
   public imageUrl: string | undefined;
 
-  // @Input()
   public citiesList: City[] | undefined;
 
   constructor(private cityService: CityService) { }
-
-  // ngOnInit(): void {
-  //   this.cityService.getCities().subscribe(cities => {
-  //     this.citiesList = cities;
-  //   });  
-   
-  //   console.log(this.citiesList);
-  // }
-
-
-
-  // ngOnInit(): void {
-  //   this.citiesList = this.cityService.getCities();  
-  //   console.log(this.citiesList);
-  //   // const routeParams = this.activatedRoute.snapshot.paramMap;
-  //   // const cityId : Number = Number(routeParams.get('cityId'));
-  // }
 }

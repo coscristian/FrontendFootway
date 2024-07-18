@@ -1,5 +1,5 @@
 <div class="main-catalog">
-    <div *ngFor="let city of citiesList" [routerLink]="['/city', city.id]">
+    <div *ngFor="let city of citiesList" [routerLink]="['/city', city.id]" class="card">
         <mat-card class="card">
             <img [src]="city.imageUrl"/>
             <mat-card-content class="card-content">

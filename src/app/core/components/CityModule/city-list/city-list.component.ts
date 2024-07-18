@@ -15,11 +15,8 @@ export class CityListComponent {
 
   ngOnInit(): void {
     this.cityService.getCities().subscribe(cities => {
-      console.log(cities);
       this.citiesList = cities;
-    });  
-   
-    console.log(this.citiesList);
+    });     
   }
 
 }

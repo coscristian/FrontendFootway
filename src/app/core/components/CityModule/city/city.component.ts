@@ -23,8 +23,6 @@ export class CityComponent implements OnInit{
 
     this.cityService.getCityById(this.cityId).subscribe(cities => {
       this.city = cities;
-    });  
-   
-    console.log(this.city);
+    });     
   }
 }

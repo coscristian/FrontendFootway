@@ -27,7 +27,6 @@ export class TourInfoPickerComponent{
 
     calendar.addEventListener('change', (e: any) => {
       this.selectedDate = e.target.value;
-      console.log('Fecha seleccionada:', this.selectedDate);      
     });
   }
 
@@ -50,6 +49,5 @@ export class TourInfoPickerComponent{
       panelClass: 'tour-info-picker-dialog',
       data: bookingData // Pasar los datos temporales
     });
-    console.log("Helo mostrando el siguiente modal");
   }
 }

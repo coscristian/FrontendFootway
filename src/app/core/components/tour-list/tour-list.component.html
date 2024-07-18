@@ -1,5 +1,6 @@
 <div class="main-catalog">
-    <div *ngFor="let tour of toursList" [routerLink]="['/tour', tour.id]">
+    <!-- <div *ngFor="let tour of toursList" [routerLink]="['/tour', tour.id]"> -->
+    <div *ngFor="let tour of toursList" (click)="navigateToTour(tour.id)" class="card">
         <mat-card class="card">
             <img [src]="tour.imageUrl"/>
             <mat-card-content class="card-content">
