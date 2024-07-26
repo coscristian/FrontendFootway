@@ -41,9 +41,10 @@ export class TourListComponent implements OnInit {
   }
 
   navigateToTour(tourId: number): void {    
-    this.router.navigate(['/tour', tourId]).then(() => {
-      if(this.reload)
+    this.router.navigate(['/tour', tourId]).then(() => {      
+      if(this.reload){
         window.location.reload(); // Reload necesario cuando se selecciona un tour del "Check other tours" en la página de un tour    
+      }
     });
   }
 }
