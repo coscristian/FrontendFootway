@@ -3,7 +3,7 @@
 
 ## Descripción
 
-Este es un proyecto de Angular el cual permite reservar tours y enviar correo de confirmación con el tour seleccionado y la información ingresada. (URL: https://footwaytest.azurewebsites.net/)
+Este es un proyecto de Angular el cual permite reservar tours y enviar correo de confirmación con el tour seleccionado y la información ingresada.
 
 ## Contenidos
 
