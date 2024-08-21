@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './card-catalog.component.scss'
 })
 export class CardCatalogComponent {
+  
 
 }

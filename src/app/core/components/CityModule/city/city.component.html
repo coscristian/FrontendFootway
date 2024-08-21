@@ -1,38 +1,12 @@
-<app-city-image />  
-<app-section-info 
+<app-city-image *ngIf="city"
+    [imageUrl]="city.imageUrl" 
+    [title]="city.name"
+/>  
+<app-section-info *ngIf="city"
     title="Our Tours"
-    description="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+    [description]="city.longDescription"
 /> 
-<app-card-catalog>
-    <app-card 
-        imagePath="assets/images/londonNew.jpg" 
-        title="Tour in London"
-        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-        alt="Tour"
-        link="tour"
-    />
-    
-    <app-card 
-        imagePath="assets/images/londonNew.jpg" 
-        title="Tour in London"
-        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-        alt="Tour"
-        link="tour"
-    />
+<app-tour-list *ngIf="city?.tours"
+    [toursList]="city?.tours"
+/>
 
-    <app-card 
-        imagePath="assets/images/londonNew.jpg" 
-        title="Tour in London"
-        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-        alt="Tour"
-        link="tour"
-    />
-
-    <app-card 
-        imagePath="assets/images/londonNew.jpg" 
-        title="Tour in London"
-        description="Lorem ipsum dolor, sit amet consectetur adipisicing elit."
-        alt="Tour"
-        link="tour"
-    />
-</app-card-catalog>

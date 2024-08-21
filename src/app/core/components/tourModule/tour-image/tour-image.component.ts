@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tour-image',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './tour-image.component.scss'
 })
 export class TourImageComponent {
-
+  @Input() public imageUrl: string | undefined;
+  @Input() public alt: string | undefined;
 }

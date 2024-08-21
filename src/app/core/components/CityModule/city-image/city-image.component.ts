@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-city-image',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './city-image.component.scss'
 })
 export class CityImageComponent {
-
+  @Input() public imageUrl: string | undefined;
+  @Input() public title: string | undefined;
 }

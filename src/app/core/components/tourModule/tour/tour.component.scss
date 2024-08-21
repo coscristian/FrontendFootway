@@ -1,14 +1,356 @@
-#other-tours-section {
-    margin-top: 40px;
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
 }
 
-#tour-title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
+h1, h2, h3 {
+
+    font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    color: #10004f; /* También puedes usar rgb(16, 0, 79) */
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+    line-height: 28px;
+    letter-spacing: 0.144px;
+    word-spacing: 0px;
+    font-weight: 600;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none; 
+    text-indent: 0px;
+    font-size: 30px;
+    
 }
 
-#button-container {
-    display: flex;
-    justify-content: center;
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
+
+.tour-detail {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.tour-image {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tour-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.info-text {
+  max-width: calc(100% - 150px);
+}
+
+.tour-info h1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tour-price {
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 15px;
+  position: absolute;
+  right: 0;
+  top: -40px;
+  transform: translateX(100%) rotate(-8deg); 
+  transform-origin: right top; 
+  z-index: 1; 
+}
+
+
+
+
+.tour-info p {
+  font-size: 1.3rem;
+  color: #555;
+  margin: 0;
+}
+
+.tour-details {
+  margin-top: 10px;
+}
+
+.tour-details p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.tour-carousel {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.tour-carousel h2 {
+  margin-bottom: 30px;
+}
+#other-tours {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.carousel-item {
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.carousel-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.carousel-item p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.carousel-item:hover {
+  background: #f1f1f1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.carousel-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 5px 12px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.start-label {
+  background: #28a745;
+  font-size: 25px;
+  font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
+}
+
+.end-label {
+  background: #dc3545;
+  right: 10px;
+  left: auto;
+  font-size: 25px;
+  font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .tour-info {
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .info-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .tour-price {
+    position: static; /* Remove absolute positioning */
+    margin: 15px 0 0 0; /* Adjust margin to fit below the title */
+  }
+
+
+
+  app-generic-button {
+    margin-top: 20px; 
+    align-self: center; 
+  }
+
+  .tour-info h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px; 
+  }
+
+  .tour-info p {
+    font-size: 1.1rem;
+  }
+
+  .carousel-item img {
+    height: 250px;
+  }
+}
+
+.info-text  {
+  font-size: 20px;   
+  
+}
+
+.info-text h1 {
+  position: relative;
+  margin-bottom: 20px;
+  display: inline-block; 
+}
+
+.info-text h1:after {
+  background-color: #023a72;
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100px;
+  margin-top: 5px;
+  margin-right: auto;
+}
+
+.blog-time {
+  font-size: 0.85rem;
+  color: #fff;
+  background-color: #28a745; 
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+.tour-details {
+  margin-top: 15px;
+  background-color: #eef2f5;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tour-details p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #023a72;
+}
+
+.tour-details p::before {
+  content: "•";
+  margin-right: 8px;
+  color: #28a745;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.tour-price-mobile {
+  display: none; /* Show the new price element on mobile */
+}
+
+p {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .info-text h1:after {
+    width: 100%;
+  }
+
+  .tour-details {
+    font-size: 1rem;
+    padding: 10px;
+  }
+  
+  .tour-details p::before {
+    font-size: 1.2rem;
+  }
+
+  .tour-price {
+    position: static; /* Remove absolute positioning */
+    margin: 15px 0 0 0; /* Adjust margin to fit below the title */
+    width: auto; /* Ensure the width is not constrained */
+    background-color: #ff4d4d;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .tour-price {
+    display: none; /* Hide the original price element on mobile */
+  }
+
+  .tour-price-mobile {
+    display: block; 
+    background-color: red;
+    color: white;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
+  
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+
+}
+
+
+.hueco {
+  width: 10px;
+  height: 10px;
+  background-color: #f9f9f9; 
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(-50%, -50%);
+
+}
+
+.price-value {
+  margin-left: 10px;
+}
+
+#short-description {
+  color: black;
+}
+

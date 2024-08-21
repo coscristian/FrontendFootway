@@ -1,19 +1,21 @@
 <div id="tour-details">
     <h3 id="tour-details-title">Tour details</h3>
     <div class="detail">
-        <span>Duration:</span> <p> Approximately 8 hours</p>
+        <span>Duration:</span> <p> {{ duration }} hours</p>
     </div>
     <div class="detail">
-        <span>Language:</span> <p>English</p>
+        <span>Languages:</span> <p>{{ languages }}</p>
     </div>
     <div class="detail">
-        <span>Price:</span>    <p>75 per person</p>
+        <span>Price:</span> <p>{{ price | currency: 'EUR': true }} per person</p>
     </div>
     <div class="detail">
-        <span>Starting Point:</span> <p>Trafalgar Square</p>
-    </div>
-    <div class="detail">
-        <span>Ending Point:</span>  <p>London Eye</p>
-    </div>
+        <span>Places:</span>
+        <ol>
+            <li *ngFor="let place of places">
+                {{ place }}                
+            </li>
+        </ol>
+    </div>    
 </div>
 

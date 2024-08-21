@@ -35,6 +35,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { SelectAmountTouristsComponent } from './core/components/tourModule/select-amount-tourists/select-amount-tourists.component';
+import { CardCityComponentComponent } from './core/components/CityModule/card-city-component/card-city-component.component';
+import { CityListComponent } from './core/components/CityModule/city-list/city-list.component';
+import { TourListComponent } from './core/components/tour-list/tour-list.component';
+import { TouristPersonalDataComponent } from './core/components/tourModule/tourist-personal-data/tourist-personal-data.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SuccessModalComponent } from './shared/components/success-modal/success-modal.component';
+import { TestimonialsV2Component } from './core/components/testimonialsModule/testimonials-v2/testimonials-v2.component';
+import { CityDetailComponent } from './core/components/CityModule/city/city-detail/city-detail.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { NgxTypedWriterModule } from 'ngx-typed-writer';
 
 @NgModule({
   declarations: [
@@ -59,7 +69,14 @@ import { SelectAmountTouristsComponent } from './core/components/tourModule/sele
     TourDateModalComponent,
     TourInfoPickerComponent,
     SelectTimeComponent,
-    SelectAmountTouristsComponent
+    SelectAmountTouristsComponent,
+    CardCityComponentComponent,
+    CityListComponent,
+    TourListComponent,
+    TouristPersonalDataComponent,
+    SuccessModalComponent,
+    TestimonialsV2Component,
+    CityDetailComponent
     // CalendarDate
   ],
   imports: [
@@ -74,7 +91,11 @@ import { SelectAmountTouristsComponent } from './core/components/tourModule/sele
     ReactiveFormsModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule    
+    MatInputModule,
+    ReactiveFormsModule,
+    SlickCarouselModule,
+    HttpClientModule,
+    NgxTypedWriterModule
   ],
   providers: [
     provideAnimationsAsync(),

@@ -1,0 +1,25 @@
+<div class="main-catalog">
+    <div *ngFor="let tour of toursList" (click)="navigateToTour(tour.id)" class="card">
+        <div class="card-img-holder">
+        <img [src]="tour.imageUrl">
+        </div>
+        <h3 class="blog-title">{{ tour.name }}</h3>
+        <div class="card-details">
+            <span class="blog-time">Available</span>
+            <span class="tour-price">{{ 155 | currency: '£ ' }}</span>
+        </div>
+        <p class="description">
+            {{ tour.shortDescription }}
+        </p>
+        <div class="options">
+        <span id="discover">
+            Discover more
+        </span>
+        <button class="btn">View</button>
+        </div>
+    </div>
+</div>
+  
+  
+  
+  

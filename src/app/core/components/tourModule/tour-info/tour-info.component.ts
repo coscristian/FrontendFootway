@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tour-info',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './tour-info.component.scss'
 })
 export class TourInfoComponent {
-
+  @Input() public name: string | undefined;
+  @Input() public description: string | undefined;
 }

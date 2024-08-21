@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainContentComponent } from './core/components/home/main-content/main-content.component';
-import { CityComponent } from './core/components/CityModule/city/city.component';
 import { TourComponent } from './core/components/tourModule/tour/tour.component';
+import { CityDetailComponent } from './core/components/CityModule/city/city-detail/city-detail.component';
 
 const routes: Routes = [
   {
@@ -10,17 +10,19 @@ const routes: Routes = [
     component: MainContentComponent 
   },
   {
-    path: 'city',
-    component: CityComponent 
+    path: 'city/:cityId',
+    component: CityDetailComponent,
   },
   {
-    path: 'tour',
+    path: 'tour/:tourId',
     component: TourComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

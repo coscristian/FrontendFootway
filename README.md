@@ -1,27 +1,19 @@
-# Footway
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+# Proyecto Tours
 
-## Development server
+## Descripción
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este es un proyecto de Angular el cual permite reservar tours y enviar correo de confirmación con el tour seleccionado y la información ingresada.
 
-## Code scaffolding
+## Contenidos
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Dependencias](#dependencias)
+- [Notas](#notas)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Dependencias
 
-## Running unit tests
+- [Cally](https://wicky.nillia.ms/cally/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para ver todas las dependencias, revisa el archivo `package.json`.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

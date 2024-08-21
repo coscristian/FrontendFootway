@@ -14,39 +14,10 @@ export class TourDateModalComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(TourInfoPickerComponent, {
       width: '250px'
-      // data: {name: this.name, animal: this.animal}
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      // this.animal = result;
     });
   }
 }
-
-// @Component({
-//   selector: 'dialog-overview-example',
-//   templateUrl: 'dialog-overview-example.html',
-//   styleUrls: ['dialog-overview-example.css'],
-// })
-// export class DialogOverviewExample {
-
-//   animal: string;
-//   name: string;
-
-//   constructor(public dialog: MatDialog) {}
-
-//   openDialog(): void {
-//     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-//       width: '250px',
-//       data: {name: this.name, animal: this.animal}
-//     });
-
-//     dialogRef.afterClosed().subscribe(result => {
-//       console.log('The dialog was closed');
-//       this.animal = result;
-//     });
-//   }
-
-// }
 
