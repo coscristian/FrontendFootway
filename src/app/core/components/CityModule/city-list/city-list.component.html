@@ -1,13 +1,22 @@
 <div class="main-catalog">
     <div *ngFor="let city of citiesList" [routerLink]="['/city', city.id]" class="card">
-        <mat-card class="card">
-            <img [src]="city.imageUrl"/>
-            <mat-card-content class="card-content">
-                <h3>{{ city.name }}</h3>
-                <p class="card-description">
-                    {{ city.shortDescription }}
-                </p>
-            </mat-card-content>
-        </mat-card>
+        <div class="card-img-holder">
+        <img [src]="city.imageUrl">
+        </div>
+        <h3 class="blog-title">{{ city.name }}</h3>
+        <span class="blog-time">Available</span>
+        <p class="description">
+            {{ city.shortDescription }}
+        </p>
+        <div class="options">
+        <span id="discover">
+            Discover more
+        </span>
+        <button class="btn">View</button>
+        </div>
     </div>
 </div>
+  
+  
+  
+  

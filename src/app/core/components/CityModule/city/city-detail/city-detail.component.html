@@ -1,0 +1,14 @@
+<div class="city-detail">
+  <div class="city-image">
+    <img [src]="city?.imageUrl" alt="{{ city?.name }}">
+  </div>
+  
+  <div class="city-info">
+    <h1>{{ city?.name }}</h1>
+    <p>{{ city?.shortDescription }}</p>
+  </div>
+
+
+<app-tour-list *ngIf="city?.tours"
+    [toursList]="city?.tours"
+/>

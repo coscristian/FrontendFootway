@@ -1,5 +1,13 @@
 import { TourDetails } from "./TourDetails";
 
+export class Place {
+    constructor(
+      public name: string,
+      public description: string,
+      public imageUrl: string
+    ) {}
+}
+
 export class Tour {
     constructor(
         public id: number,
@@ -9,5 +17,6 @@ export class Tour {
         public imageUrl: string,
         public isActive: boolean,
         public tourDetails: TourDetails,
+        public tourPlaces: Place[] = []
     ) {}
 }

@@ -45,7 +45,8 @@
               "src/app/styles/themes/custom-theme.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           },
           "configurations": {
             "production": {

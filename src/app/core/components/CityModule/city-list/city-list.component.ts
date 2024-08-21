@@ -14,7 +14,9 @@ export class CityListComponent {
   constructor(private cityService: CityService) { }
 
   ngOnInit(): void {
+    document.body.scrollTop = 0;
     this.cityService.getCities().subscribe(cities => {
+      console.log(cities);
       this.citiesList = cities;
     });     
   }

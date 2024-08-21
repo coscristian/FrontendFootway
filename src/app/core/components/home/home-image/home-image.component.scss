@@ -26,3 +26,22 @@
     height: 100%;
     color: white;
 }
+
+#typing-ngx {
+    font-size:40px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    #typing-ngx {
+        font-size: 20px; /* Tamaño de fuente más pequeño para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    #typing-ngx {
+        font-size: 18px; /* Tamaño de fuente aún más pequeño para pantallas pequeñas */
+    }
+}
+

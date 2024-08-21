@@ -18,6 +18,7 @@ export class CityComponent implements OnInit{
   constructor(private route: ActivatedRoute, private cityService: CityService) {}
   
   ngOnInit(): void {
+    document.body.scrollTop = 0;
     const routeParams = this.route.snapshot.paramMap;
     this.cityId = Number(routeParams.get('cityId'));
 

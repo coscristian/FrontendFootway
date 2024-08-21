@@ -1,9 +1,18 @@
 @use '@angular/material' as mat;
 @import 'app/styles/themes/custom-theme.scss';
 
-body { font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
 
-html, body { height: 100%; }
+html, body {
+  height: 100%; 
+  font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,12 +30,21 @@ time, mark, audio, video {
   padding: 0;
 }
 
+.content {
+  flex: 1; 
+}
+
+.footer {
+  background-color: #333;
+  color: #fff; 
+  text-align: center; 
+  padding: 10px 0; 
+  width: 100%; 
+  position: relative; 
+  bottom: 0;
+}
 
 @media (min-width: 600px) {
-  // body {
-  //   margin-left:50px; margin-right: 50px; margin-top: 0; margin-bottom: 0;
-  // }
-
   .tour-info-picker-dialog .mat-mdc-dialog-surface{
     width: 600px;
     padding: 30px;
@@ -38,21 +56,21 @@ time, mark, audio, video {
 }
 
 .logo-title {
-    display: flex;    
-    align-items: center;
-    gap: 10px;
+  display: flex;    
+  align-items: center;
+  gap: 10px;
 }
 
 .options-menu {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .example-fill-remaining-space {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
-.tour-info-picker-dialog .mat-mdc-dialog-surface{
+.tour-info-picker-dialog .mat-mdc-dialog-surface {
   padding: 30px;
 }
 
@@ -74,7 +92,6 @@ time, mark, audio, video {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  gap: 50px;
 }
 
 @media (min-width: 600px) {
@@ -97,8 +114,3 @@ time, mark, audio, video {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-
-
-
-

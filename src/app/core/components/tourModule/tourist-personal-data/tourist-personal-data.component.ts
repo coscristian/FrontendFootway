@@ -46,10 +46,6 @@ export class TouristPersonalDataComponent {
           const dialogRef = this.dialog.open(SuccessModalComponent, {
             data: { message: 'Your tour has been booked successfully!' }
           });
-  
-          setTimeout(() => {
-            dialogRef.close();
-          }, 5000);
         },
         error => {
         }

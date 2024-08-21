@@ -1,0 +1,16 @@
+<div class="testimonials-carousel">
+  <h2>Customer Testimonials</h2>
+  
+  <div class="carousel">    
+    <div class="testimonial-card">
+      <img [src]="testimonials[currentTestimonialIndex].image" alt="{{ testimonials[currentTestimonialIndex].name }}" class="testimonial-image">
+      <h3>{{ testimonials[currentTestimonialIndex].name }}</h3>
+      <p>"{{ testimonials[currentTestimonialIndex].message }}"</p>
+      <small>{{ testimonials[currentTestimonialIndex].date }}</small>
+      <div class="rating">
+        <span *ngFor="let star of [].constructor(testimonials[currentTestimonialIndex].rating)">&#9733;</span>
+        <span *ngFor="let star of [].constructor(5 - testimonials[currentTestimonialIndex].rating)">&#9734;</span>
+      </div>
+    </div>    
+  </div>
+</div>

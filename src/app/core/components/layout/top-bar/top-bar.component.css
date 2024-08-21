@@ -1,9 +1,59 @@
 .main-header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .logo-title {
     cursor: pointer;
+}
+
+.main-header > div, .main-header > span {
+    flex: 1;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+#company-name {
+    font-weight: 700;
+}
+
+.options-menu {
+    justify-content: flex-end;
+    display: flex;
+    gap: 10px;
+}
+
+#topbar-cities, #topbar-tours {
+    cursor: pointer;
+    font-size: 25px;
+    
+}
+
+#topbar-cities:hover, #topbar-tours:hover {
+    transform: scale(1.1) translateY(-3px); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
+    border-radius: 5px; 
+}
+
+@media (max-width: 768px) {
+    .main-header > div, .main-header > span {
+        font-size: 20px; 
+    }
+    
+    #company-name {
+        font-size: 20px; 
+    }
+
+    #topbar-cities, #topbar-tours {
+        font-size: 20px; 
+    }
 }

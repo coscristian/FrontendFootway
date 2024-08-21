@@ -1,7 +1,24 @@
 <section class="main-container">
     <div class="container-content">
-        <h2>Discover the World</h2>
+        <ngx-typed-writer
+        id="typing-ngx"
+        [strings]="[
+          'Embark on a journey and',
+          'Step into <strong>adventure</strong> and',
+          'Set your sights on new horizons and',
+          'Let your wanderlust guide you to',
+          'Get ready to be amazed as you',
+          'Start your unforgettable journey and',
+          'Open the door to wonder and'
+        ]"
+        [shuffle]="true"
+        [isHTML]="true"
+        [backSpeed]="50"
+        [typeSpeed]="50"
+      ></ngx-typed-writer>
+
         <p>Explore breathtaking destinations</p>
         </div>
-    <img class="main-image" src="https://footwaystorage.blob.core.windows.net/footwayimages/London2.png" alt="London image"/>    
+    <img class="main-image" src="assets/images/London2.png" alt="London image"/>    
+
 </section>

@@ -41,6 +41,10 @@ import { TourListComponent } from './core/components/tour-list/tour-list.compone
 import { TouristPersonalDataComponent } from './core/components/tourModule/tourist-personal-data/tourist-personal-data.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SuccessModalComponent } from './shared/components/success-modal/success-modal.component';
+import { TestimonialsV2Component } from './core/components/testimonialsModule/testimonials-v2/testimonials-v2.component';
+import { CityDetailComponent } from './core/components/CityModule/city/city-detail/city-detail.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { NgxTypedWriterModule } from 'ngx-typed-writer';
 
 @NgModule({
   declarations: [
@@ -70,7 +74,9 @@ import { SuccessModalComponent } from './shared/components/success-modal/success
     CityListComponent,
     TourListComponent,
     TouristPersonalDataComponent,
-    SuccessModalComponent
+    SuccessModalComponent,
+    TestimonialsV2Component,
+    CityDetailComponent
     // CalendarDate
   ],
   imports: [
@@ -87,7 +93,9 @@ import { SuccessModalComponent } from './shared/components/success-modal/success
     MatSelectModule,
     MatInputModule,
     ReactiveFormsModule,
-    HttpClientModule
+    SlickCarouselModule,
+    HttpClientModule,
+    NgxTypedWriterModule
   ],
   providers: [
     provideAnimationsAsync(),

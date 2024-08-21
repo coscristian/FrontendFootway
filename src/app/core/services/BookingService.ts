@@ -7,11 +7,12 @@ import { catchError, Observable, throwError } from 'rxjs';
 })
 export class BookingService {
 
-  private bookingUrl = 'https://footwayservices.azurewebsites.net/Booking/BookTour';
+  private bookingUrl = 'https://localhost:7216/Booking/BookTour';
 
   constructor(private http: HttpClient) { }
 
   saveTourist(touristReservation: any): Observable<any> {
+    console.log(touristReservation);
     return this.http.post<any>(this.bookingUrl, touristReservation)
       .pipe(
         catchError(this.handleError)

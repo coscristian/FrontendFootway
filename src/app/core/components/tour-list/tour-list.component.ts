@@ -25,6 +25,7 @@ export class TourListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    document.body.scrollTop = 0;
     if (this.toursList) {
       const routeParams = this.route.snapshot.paramMap;
       this.cityId = Number(routeParams.get('cityId'));

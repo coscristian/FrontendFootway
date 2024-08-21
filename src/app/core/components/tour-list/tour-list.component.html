@@ -1,14 +1,25 @@
 <div class="main-catalog">
-    <!-- <div *ngFor="let tour of toursList" [routerLink]="['/tour', tour.id]"> -->
     <div *ngFor="let tour of toursList" (click)="navigateToTour(tour.id)" class="card">
-        <mat-card class="card">
-            <img [src]="tour.imageUrl"/>
-            <mat-card-content class="card-content">
-                <h3>{{ tour.name }}</h3>
-                <p class="card-description">
-                    {{ tour.shortDescription }}
-                </p>
-            </mat-card-content>
-        </mat-card>
+        <div class="card-img-holder">
+        <img [src]="tour.imageUrl">
+        </div>
+        <h3 class="blog-title">{{ tour.name }}</h3>
+        <div class="card-details">
+            <span class="blog-time">Available</span>
+            <span class="tour-price">{{ 155 | currency: '£ ' }}</span>
+        </div>
+        <p class="description">
+            {{ tour.shortDescription }}
+        </p>
+        <div class="options">
+        <span id="discover">
+            Discover more
+        </span>
+        <button class="btn">View</button>
+        </div>
     </div>
 </div>
+  
+  
+  
+  

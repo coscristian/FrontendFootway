@@ -10,7 +10,7 @@ export class CityService {
 
   private cities: City[] | undefined;
   
-  private citiesUrl = 'https://footwayservices.azurewebsites.net/cities';
+  private citiesUrl = 'https://localhost:7216/cities';
   
   constructor() { }
 

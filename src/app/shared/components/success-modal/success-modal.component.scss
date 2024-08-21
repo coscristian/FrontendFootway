@@ -1,4 +1,129 @@
+/* Modal Container */
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    position: relative;
+}
+  
+/* Modal Content */
 .modal-content {
     text-align: center;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 0.3s ease-in-out;
+}
+  
+/* Success Icon */
+.success-icon {
+    display: block;
+    margin: 0 auto 20px;
+}
+  
+/* Modal Title */
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #10004f;
+    margin-bottom: 10px;
+}
+  
+/* Modal Message */
+.modal-message {
+    font-size: 18px;
+    color: #666666;
+    margin: 5px 0;
+}
+  
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+  
+.close-button mat-icon {
+    font-size: 24px;
+    color: #10004f;
+}
+  
+/* Modal Actions */
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+.modal-actions button {
+    background-color: #10004f;
+    color: #fff;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+  
+/* Hover Effect */
+.modal-actions button:hover {
+    background-color: #080033;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+  
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+  
+.mat-dialog-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+  
+/* Responsividad */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 15px;
+        max-width: 90%;
+    }
+  
+    .success-icon {
+        width: 100px;
+        height: 100px;
+    }
+  
+    .modal-title {
+        font-size: 20px;
+    }
+  
+    .modal-message {
+        font-size: 16px;
+    }
 }

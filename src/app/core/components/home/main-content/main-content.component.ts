@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { City } from '../../../models/City';
-import { CityService } from '../../../services/CityService';
 import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 
@@ -12,12 +10,12 @@ import { ViewportScroller } from '@angular/common';
 export class MainContentComponent implements OnInit {
 
   constructor(
-    private route: ActivatedRoute,
-    // private router: Router,
+    private route: ActivatedRoute,    
     private viewportScroller: ViewportScroller
   ) {}
 
   ngOnInit(): void {
+    document.body.scrollTop = 0;
     this.route.fragment.subscribe((fragment) => {
       if (fragment) {
         this.viewportScroller.scrollToAnchor(fragment);

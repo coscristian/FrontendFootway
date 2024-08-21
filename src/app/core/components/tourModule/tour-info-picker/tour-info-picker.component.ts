@@ -38,8 +38,6 @@ export class TourInfoPickerComponent{
     const bookingData = {
       tourDate: this.selectedDate,
       tourId: this.tourId
-      // selectedTime: this.selectedTime,
-      // selectedAmount: this.selectedAmount
     };
 
     this.dialogRef.close();
@@ -47,7 +45,7 @@ export class TourInfoPickerComponent{
     const dialogRef = this.dialog.open(TouristPersonalDataComponent, {
       width: '500px',
       panelClass: 'tour-info-picker-dialog',
-      data: bookingData // Pasar los datos temporales
+      data: bookingData 
     });
   }
 }

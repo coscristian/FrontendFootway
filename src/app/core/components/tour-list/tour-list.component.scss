@@ -1,9 +1,180 @@
 .card-description {
     text-align: justify;
     text-justify: inter-word;
-    // padding: 10px;
 }
 
 .card {
     cursor: pointer;
 }
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.main-catalog {
+  gap: 10px; 
+}
+
+.card {
+  cursor: pointer;
+  width: 25rem;
+  height: auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-holder img {
+  width: 100%;
+  height: auto;
+  max-height: 15rem;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card-img-holder img:hover {
+  transform: scale(1.05);
+}
+
+.blog-title {
+  color: #22215B;
+  margin: 15px 0 10px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.card:hover .blog-title {
+  color: #023a72;
+}
+
+.description {
+  padding: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: black;
+}
+
+.blog-time {
+  font-size: .8rem;
+  color: #fff;
+  background-color: #28a745;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover .blog-time {
+  background-color: #218838;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.options span {
+  font-weight: 600;
+  color: #22215B;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+#discover::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #023a72;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+#discover:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 400;
+  background: #EEF7FE;
+  color: #22215B;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #023a72;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 465px) {
+  .card {
+    width: 100%;
+    margin: 5px auto;
+  }
+}
+
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.tour-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff4d4d;
+}
+
+        
