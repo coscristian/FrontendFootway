@@ -30,3 +30,9 @@
 calendar-month {
     --color-accent: #07689f;
 }
+
+.tour-info-picker-dialog {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  

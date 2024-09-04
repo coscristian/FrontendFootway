@@ -3,39 +3,66 @@
     flex-direction: column;
     align-items: center;
     background-color: #efeff0;
-    width: 100vw; /* Ocupa todo el ancho de la ventana */
-    margin-left: calc(-50vw + 50%); /* Elimina márgenes laterales */
-    margin-right: calc(-50vw + 50%); /* Elimina márgenes laterales */
-    padding: 30px 15px; /* Añade padding general */
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
 }
 
 #testimonial-title {
     font-weight: 700;
     margin-bottom: 15px;
-    text-align: center; /* Centra el título en pantallas pequeñas */
+    text-align: center;
 }
 
 .description {
     color: #666666;
-    text-align: center; /* Centra el texto en pantallas pequeñas */
+    text-align: center;
 }
 
 #testimonial-subtitle {
-    margin: 15px 0 15px 0;
+    margin: 15px 0;
     color: #666666;
     font-weight: 400;
-    text-align: center; /* Centra el subtítulo en pantallas pequeñas */
+    text-align: center;
+}
+
+.app-testimonial-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Define a maximum width for larger screens */
+}
+
+/* Estilos para tarjetas de testimonio */
+.testimonial-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px;
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .testimonials {
         padding: 30px 10px; /* Reduce el padding lateral */
-        margin-left: -10px; /* Ajusta los márgenes para pantallas pequeñas */
-        margin-right: -10px; /* Ajusta los márgenes para pantallas pequeñas */
     }
 
     #testimonial-title, .description, #testimonial-subtitle {
         font-size: 1.2rem; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+    }
+
+    .testimonial-card {
+        width: 90%; /* Aumenta el ancho en pantallas pequeñas para aprovechar el espacio */
+        max-width: none; /* Elimina el máximo ancho para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonials {
+        padding: 20px 5px; /* Ajusta el padding para pantallas muy pequeñas */
+    }
+
+    #testimonial-title, .description, #testimonial-subtitle {
+        font-size: 1rem; /* Ajusta aún más el tamaño de fuente para pantallas pequeñas */
     }
 }

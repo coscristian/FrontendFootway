@@ -4,21 +4,21 @@ h1, h2, h3 {
 
 h1, h2, h3 {
 
-    font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
-    font-size: 24px;
-    color: #10004f; /* También puedes usar rgb(16, 0, 79) */
-    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
-    line-height: 28px;
-    letter-spacing: 0.144px;
-    word-spacing: 0px;
-    font-weight: 600;
-    font-style: normal;
-    font-variant: normal;
-    text-transform: none;
-    text-decoration: none; 
-    text-indent: 0px;
-    font-size: 30px;
-    
+  font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
+  font-size: 24px;
+  color: #10004f; /* También puedes usar rgb(16, 0, 79) */
+  background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+  line-height: 28px;
+  letter-spacing: 0.144px;
+  word-spacing: 0px;
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none; 
+  text-indent: 0px;
+  font-size: 30px;
+  
 }
 
 p {
@@ -87,7 +87,20 @@ p {
   z-index: 1; 
 }
 
-
+.tour-price-free {
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 15px;
+  position: absolute;
+  right: 0;
+  top: -40px;
+  transform: translateX(100%) rotate(-8deg); 
+  transform-origin: right top; 
+  z-index: 1; 
+}
 
 
 .tour-info p {
@@ -229,15 +242,15 @@ p {
   display: inline-block; 
 }
 
-.info-text h1:after {
-  background-color: #023a72;
-  content: '';
-  display: block;
-  height: 4px;
-  width: 100px;
-  margin-top: 5px;
-  margin-right: auto;
-}
+// .info-text h1:after {
+//   background-color: #023a72;
+//   content: '';
+//   display: block;
+//   height: 4px;
+//   width: 100px;
+//   margin-top: 5px;
+//   margin-right: auto;
+// }
 
 .blog-time {
   font-size: 0.85rem;
@@ -283,11 +296,29 @@ p {
 }
 
 .tour-price-mobile {
-  display: none; /* Show the new price element on mobile */
+  display: none; 
 }
+
+.tour-price-free-mobile {
+  display: none;
+} 
 
 p {
   color: black;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin: 10px 600px 10px 0;
+}
+
+#language-details {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
 }
 
 @media (max-width: 768px) {
@@ -305,16 +336,16 @@ p {
   }
 
   .tour-price {
-    position: static; /* Remove absolute positioning */
-    margin: 15px 0 0 0; /* Adjust margin to fit below the title */
-    width: auto; /* Ensure the width is not constrained */
+    position: static; 
+    margin: 15px 0 0 0; 
+    width: auto; 
     background-color: #ff4d4d;
     padding: 0.4rem 0.8rem;
     border-radius: 0 0 10px 10px;
   }
 
-  .tour-price {
-    display: none; /* Hide the original price element on mobile */
+  .tour-price, .tour-price-free {
+    display: none; 
   }
 
   .tour-price-mobile {
@@ -330,9 +361,29 @@ p {
     margin-bottom: 10px;
   }
 
+  .tour-price-free-mobile {
+    font-size: 0.85rem;
+    color: #fff;
+    background-color: #28a745; 
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
 
+  }
+
+  hr {
+    margin: 10px 80px 10px 80px;
+  }
+
+  #language-details {
+    justify-content: center;
+  }
 }
-
 
 .hueco {
   width: 10px;
@@ -351,6 +402,54 @@ p {
 }
 
 #short-description {
-  color: black;
+  text-align: justify;
 }
+
+#details-duration {
+  font-family: "LATAM Sans", "Trebuchet MS", sans-serif;
+  color: #10004f;
+}
+
+#flag {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.fixed-book-button {
+  position: fixed;
+  bottom: 20px; 
+  right: 80px; 
+  z-index: 1000; 
+  color: white; 
+  transition: background-color 0.3s ease; 
+}
+
+.fixed-book-button:hover {
+  transform: scale(1.1); 
+}
+
+.fixed-whatsapp-button {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000; 
+  background-color: #25D366; 
+  color: white; 
+  padding: 10px; 
+  border-radius: 50%; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  transition: background-color 0.3s ease; 
+}
+
+.fixed-whatsapp-button:hover {
+  background-color: #128C7E; 
+  transform: scale(1.1);
+}
+
+.fixed-whatsapp-button i {
+  font-size: 24px;
+}
+
 

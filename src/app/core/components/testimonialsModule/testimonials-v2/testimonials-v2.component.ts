@@ -22,7 +22,7 @@ export class TestimonialsV2Component {
       message: 'An incredible experience! The tour was very well organized and the guides were very friendly.',
       date: '2024-06-15',
       rating: 5,
-      image: 'assets/images/avatar1.jpeg'
+      image: 'assets/images/jhon.png'
     },
     {
       name: 'Jane Smith',
@@ -36,7 +36,7 @@ export class TestimonialsV2Component {
       message: 'The best tour I’ve ever taken, everything was perfect.',
       date: '2024-07-22',
       rating: 5,
-      image: 'assets/images/avatar1.jpeg'
+      image: 'assets/images/carlos.jpeg'
     }
   ];
   

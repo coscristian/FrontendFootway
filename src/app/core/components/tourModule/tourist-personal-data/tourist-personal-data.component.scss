@@ -1,18 +1,116 @@
-.formulario {
+/* Contenedor del modal */
+.mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 80vh; /* Ajusta según tu diseño */
+    padding: 24px; /* Añade un padding adecuado */
+  }
+  
+  /* Contenedor del formulario */
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espacio entre los campos del formulario */
+    overflow-y: auto; /* Permite el scroll en caso de que el contenido sea demasiado largo */
+  }
+  
+  /* Contenedor del título del formulario */
+  .form-header {
+    margin-bottom: 16px; /* Espacio inferior para separar del contenido del formulario */
+  }
+  
+  /* Título del formulario */
+  .form-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Ajusta el color según tu diseño */
+    text-align: center; /* Centra el texto del título */
+  }
+  
+  /* Contenedor de los botones */
+  .button-actions {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los botones en PC */
+    margin-top: 16px; /* Espacio superior para separar del contenido del formulario */
+  }
+  
+  /* Botón de "Previous" */
+  button.previous {
+    background-color: #dcdcdc;
+    color: #000;
+    flex: 1;
+    margin-right: 8px; /* Espacio entre el botón Previous y el botón Add/Next */
+  }
+  
+  /* Botón de "Add" / "Next" */
+  button.next {
+    background-color: #007bff;
+    color: #fff;
+    flex: 1;
+    margin-right: 8px; /* Espacio entre el botón Next y el botón Remove */
+  }
+  
+  /* Botón de "Remove" */
+  button.remove {
+    background-color: #ff4d4d;
+    color: #fff;
+    flex: 1;
+    margin-right: 8px; /* Espacio entre el botón Remove y el botón Book */
+  }
+  
+  /* Botón de "Book" */
+  button.book {
+    background-color: #28a745;
+    color: #fff;
+    flex: 1;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center; /* Centra el texto en el botón */
+  }
+  
+  /* Estado de hover para los botones */
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Estado de deshabilitado para los botones */
+  button[disabled] {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
+    cursor: not-allowed;
+  }
+  
+  /* Consultas de medios para pantallas más pequeñas */
+  @media (max-width: 600px) {
+    /* Ajustar la altura máxima del modal para pantallas pequeñas */
+    .mat-dialog-content {
+      max-height: 90vh;
+      padding: 16px;
+    }
+  
+    /* Ajustar el tamaño de los botones para pantallas pequeñas */
+    button {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    /* Ajustar el espaciado entre los botones en pantallas pequeñas */
+    .button-actions {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  
+#formu {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.example-full-width {
-    width: 100%;
-}
-
-button {
-    font-size: larger;
-    font-weight: bold;
-    padding: 25px;
-    border-radius: 15px;
 }

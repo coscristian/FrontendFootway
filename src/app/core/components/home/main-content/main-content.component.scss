@@ -1,3 +1,13 @@
 .section-container {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
+  margin-left: 150px;
+  margin-right: 150px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

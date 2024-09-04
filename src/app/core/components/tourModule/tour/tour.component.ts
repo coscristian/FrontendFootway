@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
 import { TourService } from '../../../services/TourService';
@@ -13,6 +13,8 @@ import { TourInfoPickerComponent } from '../tour-info-picker/tour-info-picker.co
 export class TourComponent {
   public tour: Tour | undefined;
   public tourId: number | undefined;
+  offsetFlag = false;
+
   public slideConfig = {
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -52,8 +54,7 @@ export class TourComponent {
       this.tour = tours;
 
       this.tour.tourPlaces = this.tour?.tourPlaces ?? [];
-    });     
-
+    }); 
   }
   
   openDialog(): void {
@@ -65,5 +66,12 @@ export class TourComponent {
     dialogRef.afterClosed().subscribe(result => {
     });
   }
+
+  @HostListener('window:scroll', ['$event']) getScrollHeight(event: any) {
+    if(window.pageYOffset> 690 )
+     this.offsetFlag = true;
+    else
+      this.offsetFlag = false;
+  } 
 
 }

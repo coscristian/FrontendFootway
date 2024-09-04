@@ -1,28 +1,45 @@
-<div mat-dialog-content>
-    <form [formGroup]="touristForm" (ngSubmit)="saveTouristReservation()" class="formulario">
+<div>
+    <div class="form-header">
+      <h2>Tourist {{ currentTouristIndex + 1 }}</h2>
+    </div>
 
-        <mat-form-field class="example-full-width">
-            <mat-label>Full name</mat-label>
-            <input matInput formControlName="fullName" required aria-required="true">   
-            <mat-error *ngIf="touristForm.get('fullName')?.hasError('required')">Full name is required</mat-error>       
-        </mat-form-field>
+    <div [formGroup]="currentFormGroup" id="formu">
+      <mat-form-field class="example-full-width">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullName" required aria-required="true">
+      <mat-error *ngIf="currentFormGroup.get('fullName')?.hasError('required')">Full name is required</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Phone Number</mat-label>
+      <input type="tel" matInput formControlName="phoneNumber" placeholder="555-555-1234" required aria-required="true">
+      <mat-error *ngIf="currentFormGroup.get('phoneNumber')?.hasError('required')">Phone number is required</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput formControlName="email" placeholder="example@example.com" required aria-required="true">
+      <mat-error *ngIf="currentFormGroup.get('email')?.hasError('required')">Email is required</mat-error>
+      <mat-error *ngIf="currentFormGroup.get('email')?.hasError('email') && !currentFormGroup.get('email')?.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+    </mat-form-field>
+  </div>
 
-        <mat-form-field class="example-full-width">
-            <mat-label>Phone Number</mat-label>
-            <input type="tel" matInput formControlName="phoneNumber" placeholder="555-555-1234" required aria-required="true">
-          </mat-form-field>
-
-        <mat-form-field class="example-full-width">
-            <mat-label>Email</mat-label>
-            <input type="email" matInput formControlName="email" placeholder="example@example.com" required aria-required="true">
-            <mat-error *ngIf="touristForm.get('email')?.hasError('required')">Email is required</mat-error>
-            <mat-error *ngIf="touristForm.get('email')?.hasError('email') && !touristForm.get('email')?.hasError('required')">
-              Please enter a valid email address
-            </mat-error>
-          </mat-form-field>
-        <div mat-dialog-actions class="button-actions">
-          
-          <button mat-flat-button color="primary" type="submit">Book</button>
-        </div>
-    </form>
+  <div mat-dialog-actions class="button-actions">
+    <button mat-flat-button color="primary" (click)="previousTourist()" [disabled]="currentTouristIndex === 0" class="previous">Previous</button>
+    <button mat-flat-button color="primary" (click)="handleAddOrNext()" [disabled]="!currentFormGroup.valid" class="next">
+      {{ currentTouristIndex === tourists.length - 1 ? 'Add' : 'Next' }}
+    </button>
+    <button mat-flat-button color="warn" (click)="removeCurrentTourist()" [disabled]="tourists.length === 1" class="remove">Remove</button>
+    <button mat-flat-button color="primary" (click)="saveTouristReservation()" [disabled]="!isAllFormsComplete()" class="book">Book</button>
+  </div>
 </div>
+
+
+
+
+
+
+
+

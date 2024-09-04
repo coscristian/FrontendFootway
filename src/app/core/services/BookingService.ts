@@ -7,7 +7,7 @@ import { catchError, Observable, throwError } from 'rxjs';
 })
 export class BookingService {
 
-  private bookingUrl = 'https://localhost:7216/Booking/BookTour';
+  private bookingUrl = 'https://footwayservices.azurewebsites.net/Booking/BookTour';
 
   constructor(private http: HttpClient) { }
 

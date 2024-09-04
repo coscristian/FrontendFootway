@@ -5,7 +5,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  max-width: 600px;
+  max-width: 60%;
   margin: auto;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -47,8 +47,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente */
-  text-align: center;  /* Centra el texto horizontalmente */
+  align-items: center;
+  text-align: center;  
 }
 
 .testimonial-image {
@@ -78,5 +78,17 @@
 
 .rating {
   margin-top: 10px;
-  color: #FFD700;
+  font-size: 40px;
+  color: rgb(252, 191, 2);
+}
+
+@media (max-width: 480px) {
+  .testimonials-carousel {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  }
+
+  .testimonial-card{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
 }

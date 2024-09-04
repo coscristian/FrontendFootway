@@ -8,7 +8,7 @@ import { from, map, Observable, switchMap } from 'rxjs';
 })
 export class TourService {
   private tours: Tour[] | undefined;
-  private toursUrl = 'https://localhost:7216/tours';
+  private toursUrl = 'https://footwayservices.azurewebsites.net/tours';
 
   constructor() {}
 

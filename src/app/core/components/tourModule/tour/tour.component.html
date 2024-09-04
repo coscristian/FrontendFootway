@@ -1,39 +1,63 @@
 <div class="tour-detail">
-  <div class="tour-image">
-      <img [src]="tour?.imageUrl" alt="{{ tour?.name }}">
-  </div>
+    <div class="tour-image">
+        <img [src]="tour?.imageUrl" alt="{{ tour?.name }}">
+    </div>
+    
+    <div class="tour-info">
+        <div class="info-text">
+            <h1 id="title">{{ tour?.name }}
+                <span *ngIf="!tour?.name?.toLowerCase()?.includes('free'); else freePrice" class="tour-price">
+                    <div class="hueco"></div>
+                    <span class="price-value">£ 155.00</span>
+                </span>
+                <ng-template #freePrice>
+                    <span class="tour-price-free">
+                      <div class="hueco"></div>
+                      <span class="price-value">Free</span>
+                    </span>
+                </ng-template>
+            </h1>
+            <span *ngIf="!tour?.name?.toLowerCase()?.includes('free'); else freePriceMobile" class="tour-price-mobile">{{ 155 | currency: '£ ' }}</span>
+            <ng-template #freePriceMobile>
+                <span class="tour-price-free-mobile">
+                  <div class="hueco"></div>
+                  <span class="">Free</span>
+                </span>
+            </ng-template>
+            <p id="short-description">{{ tour?.shortDescription }}</p>
+            <span class="blog-time">Available</span>
   
-  <div class="tour-info">
-      <div class="info-text">
-          <h1 id="title">{{ tour?.name }}
-              <span class="tour-price">
-                <div class="hueco">                  
-                </div>
-                <span class="price-value">£ 155.00</span>
-              </span>
-          </h1>
-          <span class="tour-price-mobile">{{ 155 | currency: '£ ' }}</span>
-          <p id="short-description">{{ tour?.shortDescription }}</p>
-          <span class="blog-time">Available</span>
-      </div>        
-      <app-generic-button (click)="openDialog()"></app-generic-button>
+            <hr>
+            <p>Duration: <strong id="details-duration">4.5h</strong></p>
+            <!-- <hr> -->
+            <div id="language-details">
+                <p>Languages: </p> <img src="assets/images/flag.jpg" alt="English" id="flag">
+            </div>
+            <hr>          
+  
+        </div>        
+        <app-generic-button (click)="openDialog()"></app-generic-button>
+    </div>
+  
+    <div class="tour-carousel">
+        <h2>Places You Will Visit on This Tour</h2>
+        <ngx-slick-carousel class="carousel" [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let place of tour?.tourPlaces; let i = index" class="carousel-item">
+                <img [src]="place.imageUrl" alt="{{ place.name }}">
+                <h3>{{ place.name }}</h3>
+                <p>{{ place.description }}</p>
+                <span *ngIf="i === 0" class="carousel-label start-label">Start</span>
+                <span *ngIf="i === (tour?.tourPlaces!.length - 1)" class="carousel-label end-label">End</span>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+  
+    <section id="other-tours-section">
+        <h2 id="other-tours">Other Tours</h2>
+        <app-tour-list></app-tour-list>
+    </section>
+    <app-generic-button *ngIf="offsetFlag" class="fixed-book-button" (click)="openDialog()">Book now</app-generic-button>
+    <a *ngIf="offsetFlag" class="fixed-whatsapp-button" href="https://wa.link/rmhtjt" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
   </div>
-
-  <div class="tour-carousel">
-      <h2>Places You Will Visit on This Tour</h2>
-      <ngx-slick-carousel class="carousel" [config]="slideConfig">
-          <div ngxSlickItem *ngFor="let place of tour?.tourPlaces; let i = index" class="carousel-item">
-              <img [src]="place.imageUrl" alt="{{ place.name }}">
-              <h3>{{ place.name }}</h3>
-              <p>{{ place.description }}</p>
-              <span *ngIf="i === 0" class="carousel-label start-label">Start</span>
-              <span *ngIf="i === (tour?.tourPlaces!.length - 1)" class="carousel-label end-label">End</span>
-          </div>
-      </ngx-slick-carousel>
-  </div>
-
-  <section id="other-tours-section">
-      <h2 id="other-tours">Other Tours</h2>
-      <app-tour-list></app-tour-list>
-  </section>
-</div>
